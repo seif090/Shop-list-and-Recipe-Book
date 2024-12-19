@@ -1,16 +1,19 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import {Recipe} from "../recipe.modal";
 import {RecipeService} from "../recipe.service";
 import {Ingredient} from "../../shared/ingredient.model";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrl: './recipe-list.component.css'
 })
-export class RecipeListComponent implements OnInit {
+export class RecipeListComponent implements OnInit, OnDestroy {
+  subscription: Subscription;
   recipes: Recipe[] = [
+
     new Recipe('Tasty Schmitzel', 'super-tasty', 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=556,505',[
       new Ingredient('Meat', 1),
       new Ingredient('Flour', 2),
@@ -28,11 +31,19 @@ export class RecipeListComponent implements OnInit {
 
   }
   ngOnInit() {
+   this.subscription = this.recipeService.recipesChanged.subscribe(
+      (recipes: Recipe[]) => {
+        this.recipes = recipes;
+      }
+    )
     this.recipes = this.recipeService.getRecipes();
   }
   onNewRecipe(){
     this.router.navigate(['new'],{relativeTo:this.route});
 
+  }
+  ngOnDestroy(){
+    this.subscription.unsubscribe();
   }
 
 
