@@ -1,27 +1,31 @@
-# CourseProjectStartingProject
+# 🍽️ Shop List & Recipe Book – Angular Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0-rc.5.
+An interactive full-featured Angular application that allows users to manage recipes and generate shopping lists. Built using Angular best practices, this project demonstrates routing, services, forms, and component-based architecture.
 
-## Development server
+## 🔧 Tech Stack
+- Angular (CLI)
+- TypeScript
+- HTML5 / CSS3
+- Bootstrap (for styling)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🧠 Key Features
+- ✅ View, create, edit, and delete recipes
+- 🛒 Maintain a dynamic shopping list with item editing and deletion
+- 🔄 Two-way binding and reactive form handling
+- 🔧 Angular Services for managing recipe and list state
+- 📁 Modular component structure with clear separation of concerns
+- 📌 Uses Angular Routing for navigation between modules
 
-## Code scaffolding
+## 🛠️ Learning Highlights
+- Component communication (Input/Output decorators)
+- Shared services & dependency injection
+- Reactive and Template-driven forms
+- Routing, nested routes, and navigation guards
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 Future Enhancements (Optional Ideas)
+- Firebase integration for real-time data
+- User authentication (login/logout)
+- Persistent storage for recipes and lists
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🔗 GitHub Repo
+[github.com/seif090/Shop-list-and-Recipe-Book](https://github.com/seif090/Shop-list-and-Recipe-Book)
